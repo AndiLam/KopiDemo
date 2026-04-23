@@ -1,0 +1,131 @@
+.login-content {
+  --background: none;
+}
+
+/* Background image */
+.login-content::part(background) {
+  background: url('/assets/bg.jpg') no-repeat center center / cover;
+}
+
+/* Overlay */
+.overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Logo */
+.logo-section {
+  text-align: center;
+  color: var(--light);
+  margin-bottom: 30px;
+}
+
+.logo-section img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.logo-section p {
+  font-size: 16px;
+  color: var(--card-bg);
+}
+
+/* Input */
+.input-item {
+  margin-bottom: 15px;
+  color: var(--bg-light);
+  --border-radius: 12px;
+  --background: var(--satu-color);
+}
+
+.input-item ion-input {
+  --placeholder-color: var(--text-light);
+}
+
+/* Forgot password */
+.forgot-text {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+/* Login button */
+.login-btn {
+  margin-top: 10px;
+  --background: var(--dua-color);
+  --border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+}
+
+.divider span {
+  padding: 0 10px;
+  color: var(--text-light);
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #dddddd;
+  z-index: -1;
+}
+
+/* Social buttons */
+.google-btn {
+  margin-bottom: 10px;
+  --border-radius: 10px;
+  --background: transparent;
+}
+
+.fb-btn {
+  --border-radius: 10px;
+  --background: transparent;
+}
+
+/* Register text */
+.register-text {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--text-light);
+}
+
+/* efek hover */
+.input-item.item-has-focus {
+  --border-color: var(--dua-color);
+  --highlight-background: var(--dua-color);
+}
+
+.register-text strong {
+  color: var(--dua-color);
+  cursor: pointer;
+}
+
+/* Styling tambahan untuk loading  */
+.custom-loading {
+  --background: var(--satu-color);
+  --spinner-color: var(--dua-color);
+  color: var(--bg-light);
+}

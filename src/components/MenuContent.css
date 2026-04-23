@@ -1,0 +1,49 @@
+/* LIST */
+.menu-list {
+  background: transparent;
+  padding: 10px;
+}
+
+/* ITEM */
+.menu-item {
+  --background: #1e1e1e;
+  margin-bottom: 12px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.menu-thumbnail {
+  padding: 5px;
+}
+
+.menu-thumbnail img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.menu-item h2 {
+  color: var(--bg-light);
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.menu-price {
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+/* BUTTON */
+.add-btn {
+  --background: var(--dua-color);
+  color: var(--bg-light);
+  font-size: 20px;
+}
+
+/* INTERACTION */
+.menu-item:active {
+  transform: scale(0.98);
+  transition: 0.2s;
+}

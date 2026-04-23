@@ -1,0 +1,116 @@
+.benefit-content {
+  --background: var(--satu-color);
+}
+
+/* TIER CARD */
+.tier-card {
+  background: linear-gradient(135deg, #2c2c2e, #1c1c1e);
+  border: 1px solid rgba(243, 88, 10, 0.3);
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tier-header {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.tier-header h2 {
+  margin: 5px 0;
+  font-weight: 600;
+  color: var(--bg-light);
+}
+.tier-icon {
+  font-size: 40px;
+  color: var(--dua-color);
+  filter: drop-shadow(0 0 8px rgba(243, 88, 10, 0.5));
+}
+
+.tier-header span {
+  display: block;
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tier-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--dua-color), #ff8c00);
+  border-radius: 10px;
+}
+
+.tier-progress p {
+  font-size: 12px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.tier-progress strong {
+  color: var(--bg-light);
+}
+
+/* SECTION LABEL */
+.section-label h5 {
+  color: var(--bg-light);
+  margin: 0 0 20px 5px;
+  font-weight: 600;
+}
+
+/* BENEFIT GRID */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.benefit-item {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.benefit-icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+  color: var(--bg-light);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.benefit-item p {
+  color: var(--text-light);
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 0;
+}

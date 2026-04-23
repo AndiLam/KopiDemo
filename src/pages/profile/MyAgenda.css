@@ -1,0 +1,65 @@
+.agenda-content {
+  --background: var(--satu-color);
+}
+
+/* LIST */
+.agenda-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CARD */
+.agenda-card {
+  display: flex;
+  background: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.agenda-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* INFO */
+.agenda-info {
+  padding: 10px;
+  flex: 1;
+}
+
+.agenda-info h3 {
+  margin: 5px 0;
+  font-size: 15px;
+  color: var(--text-dark)
+}
+
+.agenda-info p {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* STATUS */
+.status {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  color: var(--bg-light);
+}
+
+.status.upcoming {
+  background: rgba(255, 165, 0, 0.15);
+  color: orange;
+}
+
+.status.done {
+  background: rgba(45, 211, 111, 0.15);
+  color: #2dd36f;
+}
+.status.canceled {
+  background: rgba(255, 69, 58, 0.15);
+  color: #ff453a;
+}

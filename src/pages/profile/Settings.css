@@ -1,0 +1,64 @@
+.settings-content {
+  --background: var(--satu-color);
+}
+
+
+/* HEADER */
+.settings-header {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  color: var(--bg-light);
+}
+
+.settings-header h2 {
+  margin-bottom: 5px;
+}
+
+/* FORM */
+.form-section ion-item {
+  --background: var(--card-bg);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+ion-label {
+  color: var(--text-dark);
+}
+
+/* ERROR */
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+ion-button {
+  --background: var(--dua-color);
+  --border-radius: 10px;
+}
+
+/* ICON */
+ion-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.strength {
+  font-size: 13px;
+  margin: 5px 5px 10px;
+}
+
+/* COLORS */
+.strength.weak {
+  color: red;
+}
+
+.strength.medium {
+  color: orange;
+}
+
+.strength.strong {
+  color: green;
+}

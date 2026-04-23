@@ -1,0 +1,108 @@
+.menu-section {
+  margin-top: 20px;
+}
+
+/* HEADER */
+.section-header h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--bg-light);
+}
+
+/* LIST */
+.menu-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.menu-card {
+  position: relative;
+  min-width: 150px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.menu-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+/* INFO */
+.menu-info {
+  padding: 10px;
+}
+
+/* TOP ROW (title + button) */
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TITLE */
+.menu-info h4 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.rating-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: #ffc409;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.rating-badge ion-icon {
+  font-size: 12px;
+}
+
+/* PRICE */
+.menu-info p {
+  margin-top: 5px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+/* ADD BUTTON */
+.add-cart-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  background: var(--dua-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-cart-btn ion-icon {
+  color: white;
+  font-size: 16px;
+}
+
+/* TAP EFFECT */
+.menu-card:active {
+  transform: scale(0.97);
+  transition: 0.2s;
+}

@@ -1,0 +1,48 @@
+.edit-profile-content {
+  --background: var(--satu-color);
+}
+
+/* AVATAR */
+.avatar-section {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.avatar-section ion-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 3px solid white;
+}
+
+.upload-btn {
+  display: block;
+  margin-top: 10px;
+  color: var(--dua-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* FORM */
+.form-section {
+  margin-top: 30px;
+}
+
+.form-section ion-item {
+  --background: var(--card-bg);
+  color: var(--text-dark);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.save-btn {
+  margin-top: 20px;
+  color: var(--bg-light);
+  --background: var(--dua-color);
+  --border-radius: 10px;
+}
+
+.save-btn:hover {
+  --background: var(--dua-color-hover);
+}
