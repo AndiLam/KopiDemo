@@ -26,6 +26,10 @@ const StatusContent: React.FC = () => {
     return '';
   };
 
+  const subtotal = order.items.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+  const taxAmount = subtotal * 0.11;
+  const finalTotal = subtotal + taxAmount;
+
   return (
     <div className="status-container">
       {/* STATUS CARD */}
@@ -87,10 +91,21 @@ const StatusContent: React.FC = () => {
           
           <div className="divider"></div>
           
-          <div className="order-total-row">
-            <span>Total Payment</span>
-            <span className="total-price">Rp {order.total.toLocaleString()}</span>
+          <div className="order-summary-row">
+            <IonText color="medium">Subtotal</IonText>
+            <IonText>Rp {subtotal.toLocaleString()}</IonText>
           </div>
+          <div className="order-summary-row">
+              <IonText color="medium">Tax (11%)</IonText>
+              <IonText>Rp {taxAmount.toLocaleString()}</IonText>
+            </div>
+
+            <div className="divider"></div>
+            
+            <div className="order-total-row">
+              <span>Total Payment</span>
+              <span className="total-price">Rp {finalTotal.toLocaleString()}</span>
+            </div>
         </div>
 
         {/* HELP BUTTON */}
