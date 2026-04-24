@@ -62,32 +62,34 @@ const Tabs: React.FC = () => {
         </Suspense>
       </IonRouterOutlet>
 
-      <IonTabBar slot="bottom">
-        <IonTabButton tab="home" href="/tabs/home">
-          <IonIcon icon={homeOutline} />
-          <IonLabel>Home</IonLabel>
-        </IonTabButton>
+      <div className="tabs-container">
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="home" href="/tabs/home">
+            <IonIcon icon={homeOutline} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
 
-        <IonTabButton tab="menu" href="/tabs/menu">
-          <IonIcon icon={calendarOutline} />
-          <IonLabel>Menu</IonLabel>
-        </IonTabButton>
+          <IonTabButton tab="menu" href="/tabs/menu">
+            <IonIcon icon={calendarOutline} />
+            <IonLabel>Menu</IonLabel>
+          </IonTabButton>
 
-        <IonTabButton tab="order" href="/tabs/order">
-          <IonIcon icon={receiptOutline} />
-          <IonLabel>Order</IonLabel>
-        </IonTabButton>
+          <IonTabButton tab="order" href="/tabs/order">
+            <IonIcon icon={receiptOutline} />
+            <IonLabel>Order</IonLabel>
+          </IonTabButton>
 
-        <IonTabButton tab="offers" href="/tabs/offers">
-          <IonIcon icon={pricetagOutline} />
-          <IonLabel>Offers</IonLabel>
-        </IonTabButton>
+          <IonTabButton tab="offers" href="/tabs/offers">
+            <IonIcon icon={pricetagOutline} />
+            <IonLabel>Offers</IonLabel>
+          </IonTabButton>
 
-        <IonTabButton tab="profile" href="/tabs/profile">
-          <IonIcon icon={personOutline} />
-          <IonLabel>Profile</IonLabel>
-        </IonTabButton>
-      </IonTabBar>
+          <IonTabButton tab="profile" href="/tabs/profile">
+            <IonIcon icon={personOutline} />
+            <IonLabel>Profile</IonLabel>
+          </IonTabButton>
+        </IonTabBar>
+      </div>
     </IonTabs>
   );
 };

@@ -1,20 +1,28 @@
+.tabs-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
 ion-tab-bar {
   --border: 0;
   --background: var(--satu-color);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   height: 65px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Semua */
 ion-tab-button {
   --color: var(--text-light);
   --background: var(--satu-color);
   --color-selected: var(--dua-color);
-}
-
-/*  Tab active */
-ion-tab-button.tab-selected {
-  --color: var(--dua-color);
 }
 
 ion-tab-button.tab-selected ion-icon {

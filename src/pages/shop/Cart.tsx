@@ -1,8 +1,5 @@
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonList,
   IonItem,
@@ -10,24 +7,27 @@ import {
   IonButton
 } from '@ionic/react';
 import { useCartStore } from '../../store/useCartStore';
-import { useHistory } from 'react-router';
+import { useIonRouter } from '@ionic/react';
 
 const Cart: React.FC = () => {
-    const cart = useCartStore((state) => state.cart);
-  const history = useHistory();
+  const cart = useCartStore((s) => s.cart);
+  const checkout = useCartStore((s) => s.checkout);
+  const router = useIonRouter();
+
+  const total = cart.reduce((acc, item) => acc + item.price, 0);
+
+  const handleCheckout = () => {
+    checkout();
+    router.push('/tabs/order-status', 'forward');
+  };
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Cart</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
       <IonContent>
+
         <IonList>
-            {cart.map((item, index) => (
-            <IonItem key={index}>
+          {cart.map((item, i) => (
+            <IonItem key={i}>
               <IonLabel>
                 {item.name} - Rp {item.price}
               </IonLabel>
@@ -35,9 +35,12 @@ const Cart: React.FC = () => {
           ))}
         </IonList>
 
-        <IonButton expand="block" onClick={() => history.push('/order-status')}>
+        <h3>Total: Rp {total}</h3>
+
+        <IonButton expand="block" onClick={handleCheckout}>
           Checkout
         </IonButton>
+
       </IonContent>
     </IonPage>
   );

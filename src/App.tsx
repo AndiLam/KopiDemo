@@ -7,7 +7,6 @@ import { Preferences } from '@capacitor/preferences'; // Import Preferences
 // Pages (React.lazy tetap sama)
 const Login = React.lazy(() => import('./pages/auth/Login'));
 const Tabs = React.lazy(() => import('./pages/tabs/Tabs'));
-//const OrderStatus = React.lazy(() => import('./pages/Order'));
 
 import '@ionic/react/css/core.css';
 
@@ -67,7 +66,6 @@ const App: React.FC = () => {
         <Suspense fallback={<ElegantLoader />}>
           <IonRouterOutlet>
             <Route exact path="/login" component={Login} />
-            {/* <Route exact path="/order-status" component={OrderStatus} /> */}
             <Route path="/tabs" component={Tabs} />
 
             {/* Redirect awal berdasarkan hasil checkLoginStatus */}
