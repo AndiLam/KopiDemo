@@ -1,13 +1,3 @@
-.tabs-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  background: transparent;
-}
-
 ion-tab-bar {
   --border: 0;
   --background: var(--satu-color);
@@ -16,13 +6,16 @@ ion-tab-bar {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  position: relative;
   box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 ion-tab-button {
   --color: var(--text-light);
   --background: var(--satu-color);
   --color-selected: var(--dua-color);
+  transition: 0.3s;
 }
 
 ion-tab-button.tab-selected ion-icon {

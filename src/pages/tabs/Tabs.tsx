@@ -62,7 +62,6 @@ const Tabs: React.FC = () => {
         </Suspense>
       </IonRouterOutlet>
 
-      <div className="tabs-container">
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/tabs/home">
             <IonIcon icon={homeOutline} />
@@ -89,7 +88,6 @@ const Tabs: React.FC = () => {
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
         </IonTabBar>
-      </div>
     </IonTabs>
   );
 };

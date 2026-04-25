@@ -1,0 +1,83 @@
+/* Loading */
+.custom-overlay-loading.ios, 
+.custom-overlay-loading.md {
+  --background: rgba(19, 19, 19, 0.9);
+  --spinner-color: var(--dua-color);
+  --color: var(--bg-light) !important;
+}
+
+.custom-overlay-loading .loading-wrapper {
+  border-radius: 20px !important;
+  padding: 25px !important;
+  background: rgba(30, 30, 30, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Logout & Auth */
+.custom-alert.ios .alert-wrapper,
+.custom-alert.md .alert-wrapper {
+  border-radius: 20px !important;
+  padding: 8px !important;
+  background: var(--card-bg) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+}
+
+.custom-alert .alert-head {
+  text-align: center !important;
+  padding-bottom: 10px !important;
+}
+
+.custom-alert .alert-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+}
+
+.custom-alert .alert-message {
+  text-align: center !important;
+  font-size: 14px !important;
+  color: var(--text-light) !important;
+  margin-bottom: 10px !important;
+}
+
+.custom-alert .alert-button-group {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 10px !important;
+}
+
+.custom-alert .alert-button {
+  flex: 1 !important; 
+  height: 45px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  margin: 0 !important;
+}
+
+.custom-alert .alert-button-role-cancel {
+  background: var(--satu-color) !important;
+  color: var(--bg-light) !important;
+}
+
+.custom-alert .alert-button-role-confirm {
+  background: var(--dua-color) !important;
+  color: var(--card-bg) !important;
+}
+
+.custom-alert .alert-button-inner {
+  justify-content: center !important;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}

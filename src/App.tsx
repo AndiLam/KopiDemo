@@ -27,7 +27,8 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme */
 import './theme/variables.css';
-
+import './theme/global.css';
+import './components/Loader/ElegantLoader.css';
 setupIonicReact();
 
 const ElegantLoader = () => (

@@ -29,7 +29,7 @@
   margin-top: 30px;
 }
 
-.form-section ion-item {
+.edit-profile-content .form-section ion-item {
   --background: var(--card-bg);
   color: var(--text-dark);
   border-radius: 10px;

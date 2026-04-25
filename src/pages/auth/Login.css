@@ -96,13 +96,15 @@
 /* Social buttons */
 .google-btn {
   margin-bottom: 10px;
+  color: var(--text-dark);
   --border-radius: 10px;
-  --background: transparent;
+  --background: var(--bg-light);
 }
 
 .fb-btn {
+  color: var(--bg-light);
   --border-radius: 10px;
-  --background: transparent;
+  --background: #1877f2;
 }
 
 /* Register text */

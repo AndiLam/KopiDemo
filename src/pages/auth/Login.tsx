@@ -127,10 +127,10 @@ const handleLogin = async () => {
             </IonButton>
 
             <div className="divider"><span>Or login with</span></div>
-            <IonButton expand="block" fill="outline" className="google-btn">
+            <IonButton expand="block" className="google-btn">
               <IonIcon slot="start" icon={logoGoogle} /> Login with Google
             </IonButton>
-            <IonButton expand="block" fill="outline" className="fb-btn">
+            <IonButton expand="block" className="fb-btn">
               <IonIcon slot="start" icon={logoFacebook} /> Login with Facebook
             </IonButton>
 

@@ -75,7 +75,7 @@ const CartContent: React.FC<CartContentProps> = ({ onCheckoutSuccess, onGoToMenu
             </div>
 
             <IonButton expand="block" className="checkout-btn" onClick={() => { checkout(); onCheckoutSuccess(); }}>
-              Checkout Now
+              Place Order
             </IonButton>
             <IonButton fill="clear" color="danger" expand="block" onClick={clearCart} className="clear-btn">
               Clear Cart
