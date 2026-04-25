@@ -1,10 +1,14 @@
+import React, { useState, useEffect } from 'react';
 import {
   IonPage,
   IonSearchbar,
   IonAvatar,
+  IonModal,
+  IonIcon,
+  IonButton,
   useIonViewDidEnter
 } from '@ionic/react';
-
+import { closeCircle } from 'ionicons/icons';
 import { App } from '@capacitor/app';
 import './Home.css';
 
@@ -12,7 +16,6 @@ import MenuSection from '../../components/MenuSection';
 import PageWrapper from '../../components/PageWrapper';
 import PageHeader from '../../components/PageHeader';
 
-// Swiper React
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 
@@ -35,31 +38,29 @@ const menus = [
 ];
 
 const promos = [
-  {
-    id: 1,
-    title: '20% OFF',
-    desc: 'Special for coffee lovers ☕',
-    img: '/assets/promo.jpg'
-  },
-  {
-    id: 2,
-    title: 'Buy 1 Get 1',
-    desc: 'Only today! Don’t miss it 🔥',
-    img: '/assets/promo2.jpg'
-  },
-  {
-    id: 3,
-    title: 'Free Dessert',
-    desc: 'For every large coffee ☕🍰',
-    img: '/assets/promo3.jpg'
-  }
+  { id: 1, title: '20% OFF', desc: 'Special for coffee lovers ☕', img: '/assets/promo.jpg' },
+  { id: 2, title: 'Buy 1 Get 1', desc: 'Only today! Don’t miss it 🔥', img: '/assets/promo2.jpg' },
+  { id: 3, title: 'Free Dessert', desc: 'For every large coffee ☕🍰', img: '/assets/promo3.jpg' }
 ];
 
 const Home: React.FC = () => {
+  const [showAds, setShowAds] = useState(false);
 
+  // Efek untuk Iklan
+  useEffect(() => {
+    const hasSeenAds = sessionStorage.getItem('hasSeenAds');
+    if (!hasSeenAds) {
+      const timer = setTimeout(() => {
+        setShowAds(true);
+        sessionStorage.setItem('hasSeenAds', 'true');
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  // Handler Tombol Back Device
   useIonViewDidEnter(() => {
     let listener: any;
-
     const setup = async () => {
       listener = await App.addListener('backButton', ({ canGoBack }) => {
         if (!canGoBack) {
@@ -67,9 +68,7 @@ const Home: React.FC = () => {
         }
       });
     };
-
     setup();
-
     return () => {
       listener?.remove();
     };
@@ -78,8 +77,6 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <PageWrapper className="home-content">
-
-        {/* HEADER */}
         <PageHeader
           subtitle="Hi, User 👋"
           title="Find your favorite food"
@@ -90,13 +87,8 @@ const Home: React.FC = () => {
           }
         />
 
-        {/* SEARCH */}
-        <IonSearchbar
-          className="search-bar"
-          placeholder="Search menu..."
-        />
+        <IonSearchbar className="search-bar" placeholder="Search menu..." />
 
-        {/* PROMO */}
         <Swiper
           modules={[Autoplay, Pagination]}
           autoplay={{ delay: 3000 }}
@@ -108,10 +100,7 @@ const Home: React.FC = () => {
         >
           {promos.map((promo) => (
             <SwiperSlide key={promo.id}>
-              <div
-                className="promo-banner"
-                style={{ backgroundImage: `url(${promo.img})` }}
-              >
+              <div className="promo-banner" style={{ backgroundImage: `url(${promo.img})` }}>
                 <div className="promo-text">
                   <h3>{promo.title}</h3>
                   <p>{promo.desc}</p>
@@ -121,12 +110,10 @@ const Home: React.FC = () => {
           ))}
         </Swiper>
 
-        {/* CATEGORY */}
         <div className="section">
           <div className="section-header">
             <h4>Category</h4>
           </div>
-
           <div className="category-list">
             {categories.map((cat) => (
               <div key={cat.name} className="category-item">
@@ -137,12 +124,38 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* MENU */}
         <MenuSection title="Recommended for you" items={menus} />
         <MenuSection title="Popular Drinks" items={menus} />
         <MenuSection title="Popular Food" items={menus} />
-
       </PageWrapper>
+
+      {/* popup ads */}
+      <IonModal 
+        isOpen={showAds} 
+        onDidDismiss={() => setShowAds(false)}
+        className="ads-modal"
+      >
+        <div className="ads-container">
+          <IonIcon 
+            icon={closeCircle} 
+            className="close-ads-icon" 
+            onClick={() => setShowAds(false)} 
+          />
+          <div className="ads-content">
+            <div className="ads-image-wrapper">
+              <img src="/assets/promo.jpg" alt="Special Promo" />
+              <div className="ads-tag">LIMITED TIME</div>
+            </div>
+            <div className="ads-info">
+              <h2>Weekend Special!</h2>
+              <p>Get 20% OFF for all coffee lovers. Valid only this weekend!</p>
+              <IonButton expand="block" className="ads-action-btn" onClick={() => setShowAds(false)}>
+                Claim Voucher
+              </IonButton>
+            </div>
+          </div>
+        </div>
+      </IonModal>
     </IonPage>
   );
 };
