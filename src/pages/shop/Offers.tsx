@@ -23,21 +23,21 @@ const offers: Offer[] = [
     title: 'Buy 1 Get 1 Coffee',
     discount: '50%',
     desc: 'Only for today!',
-    img: '/assets/offer1.jpg'
+    img: '/assets/offer/offer1.jpg'
   },
   {
     id: 2,
     title: 'Weekend Combo',
     discount: '30%',
     desc: 'Burger + Drink special price',
-    img: '/assets/offer2.jpg'
+    img: '/assets/offer/offer2.jpg'
   },
   {
     id: 3,
     title: 'Dessert Day',
     discount: '20%',
     desc: 'Sweet treats for less',
-    img: '/assets/offer3.jpg'
+    img: '/assets/offer/offer3.jpg'
   }
 ];
 

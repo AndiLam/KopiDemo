@@ -21,21 +21,21 @@ const myEvents: AgendaItem[] = [
     title: 'Live Music Night',
     date: '25 July 2026',
     status: 'upcoming',
-    img: '/assets/event1.jpg'
+    img: '/assets/event/event1.jpg'
   },
   {
     id: 2,
     title: 'Coffee Brewing Class',
     date: '20 July 2026',
     status: 'done',
-    img: '/assets/event2.jpg'
+    img: '/assets/event/event2.jpg'
   },
   {
     id: 3,
     title: 'Special Tasting Event',
     date: '1 July 2026',
     status: 'canceled',
-    img: '/assets/event3.jpg'
+    img: '/assets/event/event3.jpg'
   }
 ];
 

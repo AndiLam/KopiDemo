@@ -23,9 +23,9 @@ const MenuContent: React.FC = () => {
   const addToCart = useCartStore((state) => state.addToCart);
 
   const products: Product[] = [
-    { id: 1, name: 'Latte', price: 25000, img: '/assets/coffee.jpg' },
-    { id: 2, name: 'Burger', price: 40000, img: '/assets/burger.jpg' },
-    { id: 3, name: 'Cake', price: 30000, img: '/assets/cake.jpg' },
+    { id: 1, name: 'Latte', price: 25000, img: '/assets/menu/coffee.jpg' },
+    { id: 2, name: 'Burger', price: 40000, img: '/assets/menu/burger.jpg' },
+    { id: 3, name: 'Cake', price: 30000, img: '/assets/menu/cake.jpg' },
   ];
 
   return (

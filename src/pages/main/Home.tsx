@@ -23,24 +23,24 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const categories = [
-  { name: 'Popular', img: '/assets/cat-popular.png' },
-  { name: 'Food', img: '/assets/cat-food.png' },
-  { name: 'Drink', img: '/assets/cat-drink.png' },
-  { name: 'Dessert', img: '/assets/cat-dessert.png' },
-  { name: 'Coffee Tools', img: '/assets/cat-coffee-tools.png' },
-  { name: 'Merchandise', img: '/assets/cat-merchandise.png' }
+  { name: 'Popular', img: '/assets/category/cat-popular.png' },
+  { name: 'Food', img: '/assets/category/cat-food.png' },
+  { name: 'Drink', img: '/assets/category/cat-drink.png' },
+  { name: 'Dessert', img: '/assets/category/cat-dessert.png' },
+  { name: 'Coffee Tools', img: '/assets/category/cat-coffee-tools.png' },
+  { name: 'Merchandise', img: '/assets/category/cat-merchandise.png' }
 ];
 
 const menus = [
-  { id: 1, name: 'Latte', price: 25000, img: '/assets/coffee.jpg', rating: 4.8 },
-  { id: 2, name: 'Burger', price: 40000, img: '/assets/burger.jpg', rating: 4.6 },
-  { id: 3, name: 'Cake', price: 30000, img: '/assets/cake.jpg', rating: 4.7 }
+  { id: 1, name: 'Latte', price: 25000, img: '/assets/menu/coffee.jpg', rating: 4.8 },
+  { id: 2, name: 'Burger', price: 40000, img: '/assets/menu/burger.jpg', rating: 4.6 },
+  { id: 3, name: 'Cake', price: 30000, img: '/assets/menu/cake.jpg', rating: 4.7 }
 ];
 
 const promos = [
-  { id: 1, title: '20% OFF', desc: 'Special for coffee lovers ☕', img: '/assets/promo.jpg' },
-  { id: 2, title: 'Buy 1 Get 1', desc: 'Only today! Don’t miss it 🔥', img: '/assets/promo2.jpg' },
-  { id: 3, title: 'Free Dessert', desc: 'For every large coffee ☕🍰', img: '/assets/promo3.jpg' }
+  { id: 1, title: '20% OFF', desc: 'Special for coffee lovers ☕', img: '/assets/offer/promo.jpg' },
+  { id: 2, title: 'Buy 1 Get 1', desc: 'Only today! Don’t miss it 🔥', img: '/assets/offer/promo2.jpg' },
+  { id: 3, title: 'Free Dessert', desc: 'For every large coffee ☕🍰', img: '/assets/offer/promo3.jpg' }
 ];
 
 const Home: React.FC = () => {
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
           />
           <div className="ads-content">
             <div className="ads-image-wrapper">
-              <img src="/assets/promo.jpg" alt="Special Promo" />
+              <img src="/assets/offer/promo.jpg" alt="Special Promo" />
               <div className="ads-tag">LIMITED TIME</div>
             </div>
             <div className="ads-info">

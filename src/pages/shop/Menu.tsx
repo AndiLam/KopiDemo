@@ -24,21 +24,21 @@ const events: Event[] = [
     title: 'Live Music Night',
     date: '25 July 2026',
     desc: 'Enjoy acoustic performance with your favorite coffee',
-    img: '/assets/event1.jpg'
+    img: '/assets/event/event1.jpg'
   },
   {
     id: 2,
     title: 'Coffee Brewing Class',
     date: '28 July 2026',
     desc: 'Learn how to brew like a barista',
-    img: '/assets/event2.jpg'
+    img: '/assets/event/event2.jpg'
   },
   {
     id: 3,
     title: 'Open Mic Night',
     date: '30 July 2026',
     desc: 'Show your talent and enjoy the vibe',
-    img: '/assets/event3.jpg'
+    img: '/assets/event/event3.jpg'
   }
 ];
 
