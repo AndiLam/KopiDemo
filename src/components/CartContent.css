@@ -139,6 +139,7 @@
 
 /* TOTAL */
 .total {
+  color: var(--bg-light);
   margin-bottom: 20px;
   font-weight: bold;
 }
